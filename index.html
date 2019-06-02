@@ -7,22 +7,37 @@
     <title>Giphy Some Theatre GIFs</title>
     <!-- Added a link to Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy&display=swap"
+    rel="stylesheet">
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700&display=swap" rel="stylesheet">
+    <!--Linking css file-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   </head>
 
   <body>
-    <div class="jumbotron jumbotron-fluid">
-        <h1>Welcome to the Theatre</h1>
+    <div class="jumbotron jumbotron-fluid text-center">
+        <h1 class="display-1 lead" id="header">The GIF Theatre</h1>
+        <br>
+        <div class="col-11"><h3>Welcome to the GIF theater! Here you can click on the name of a play and the GIF theater will populate with gifs related to the play name! If you don't see a show you'd like to search for, you can add your own button using the button generator.</h3></div>
     </div>
     
-    <div id="buttons-view"></div>
+    <div class="container col-11">
+        <div id="buttons-view"></div>
+    
+        <form id="play-form">
+            <label for="play-input">Search for GIF's of your favorite plays!</label>
+            <input type="text" id="play-input"><br>
+            <input class="m-1" id="add-play" type="submit" value="Add a Play GIF Button">
+        </form>
+    
+        <div class="m-1">
+                <h3>Click on a gif to animate!</h3>
+        </div>
 
-    <form id="play-form">
-        <label for="play-input">Search for GIF's of your favorite plays!</label>
-        <input type="text" id="play-input"><br>
-        <input id="add-play" type="submit" value="Add a Play GIF Button">
-    </form>
-
-    <div id="gif-view"></div>
+        <div class="text-center" id="gif-view"></div>
+    </div>
 
 
     <!-- JQuery -->

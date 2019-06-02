@@ -7,7 +7,7 @@
 //when user click again, animation stops
 
 //need an array for the inital buttons on the page.
-topics = ["arsenic and old lace", "proof", "seminar", "these shining lives", "epic proportions", "fawlty towers", "she kills monsters", "one flew over the cuckoos nest", "12 angry jurors", "lost in yonkers", "true west" ];
+topics = ["Arsenic and Old Lace", "Proof", "Seminar", "These Shining Lives", "Epic Proportions", "Fawlty Towers", "She Kills Monsters", "One Flew Over The Cuckoos Nest", "12 Angry Jurors", "Lost In Yonkers", "True West" ];
 
 //need a function to generate buttons 
 function renderButtons() {
@@ -18,7 +18,7 @@ function renderButtons() {
     for (var i = 0; i < topics.length; i++) {
 
         //generate buttons for each play in the array using jquery.
-        var a = $("<button>");
+        var a = $("<button class='btn btn-secondary btn-lg m-1'>");
         // Add a class
         a.addClass("playButton");
         // Add a data-attribute with a value of the play at index i
@@ -75,15 +75,19 @@ function displayGIF() {
 //add event listeners to dynamically generated elements
 $(document).on("click", ".playButton", displayGIF);
 
+//event listener for when the gifs get clicked
 $("#gif-view").on("click", ".gif", function () {
     console.log("User clicked a gif");
+    //collecting attributes of the specific gif clicked
     var state = $(this).attr("gif-state")
     var gif = $(this).attr("gif");
     var img = $(this).attr("img");
 
+    //if gif is an image, switch to actual animated gif
     if (state === "img") {
         $(this).attr("src", gif);
         $(this).attr("gif-state", "gif");
+    // otherwise, switch from gif to image
     } else if (state === "gif") {
         $(this).attr("src", img);
         $(this).attr("gif-state", "img");

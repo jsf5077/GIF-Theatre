@@ -1,0 +1,26 @@
+h1 {
+    font-family: 'Luckiest Guy', cursive;  
+}
+h3 {
+    font-family: 'Cinzel', serif;
+}
+p {
+    font-size: 2rem;
+    font-family: 'Cinzel', serif;
+}
+.playButton {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+}
+label {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+}
+input {
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+}
+img {
+    min-width: 60%;
+    max-width: 60%;
+}
