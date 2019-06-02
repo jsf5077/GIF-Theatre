@@ -6,8 +6,6 @@
 
 //when user click again, animation stops
 
-//when user submits a new button, generate new button and add to the array
-
 //need an array for the inital buttons on the page.
 topics = ["arsenic and old lace", "proof", "seminar", "these shining lives", "epic proportions", "fawlty towers", "she kills monsters", "one flew over the cuckoos nest", "12 angry jurors", "lost in yonkers", "true west" ];
 
@@ -22,7 +20,7 @@ function renderButtons() {
         //generate buttons for each play in the array using jquery.
         var a = $("<button>");
         // Add a class
-        a.addClass("play");
+        a.addClass("playButton");
         // Add a data-attribute with a value of the play at index i
         a.attr("data-name", topics[i]);
         // Create the button's text with a value of the play at index i
@@ -31,23 +29,31 @@ function renderButtons() {
         $("#buttons-view").append(a);
     }
 }
+function displayGIF() {
+    var play = $(this).attr("data-name");
+    console.log(play);
+    var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=WaAIxnVpQ5UQ7Cn4V85lxhGj63yI9yEg&q="+play+"&limit=10&offset=0&lang=en"
 
-// $("#find-play").on("click", function(event) {
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+        var playResults = response.data;
+      
+        console.log(playResults);
 
-//     event.preventDefault();
+        for (var i = 0; i < playResults.length, i++;) {
+            var gdiv = $("<div class='gif'>");
+            var g = $("<img>");
+            g.attr("src", playResults[i].images.fixed_height_still.url);
+            gdiv.prepend(g);
+            $("#gif-view").prepend(gdiv);
+            console.log("wtf");
+        };
+    });
+}
 
-//     var play = $("#data-name").val();
-        ////use search paramters to show the first ten gifs with rating
-//     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=WaAIxnVpQ5UQ7Cn4V85lxhGj63yI9yEg&q="+hello+"&limit=10&offset=0&lang=en"
-
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET"
-//     }).then(function(response) {
-//       $("#play-view").text(JSON.stringify(response));
-//     });
-//   });
-
+//when user submits a new button, generate new button and add to the array
   $("#add-play").on("click", function(event) {
     // event.preventDefault() prevents the form from trying to submit itself.
     // We're using a form so that the user can hit enter instead of clicking the button if they want
@@ -61,5 +67,7 @@ function renderButtons() {
     // reset the buttons on the page
     renderButtons();
   });
+//add event listeners to dynamically generated elements
+$(document).on("click", ".playButton", displayGIF);
 
-  renderButtons();
+renderButtons();
