@@ -44,13 +44,16 @@ function displayGIF() {
         console.log(playResults);
 
         for (var j = 0; j < playResults.length; j++) {
-            var gdiv = $("<div class='gif'>");
-            var g = $("<img>");
+            var gdiv = $("<div>");
+            var g = $("<img class='gif' gif-state = 'img'>");
             g.attr("src", playResults[j].images.original_still.url);
-            g.attr("rating", playResults[j].rating);
-            console.log("rating "+playResults[j].rating);
+            g.attr("img", playResults[j].images.original_still.url);
+            g.attr("gif", playResults[j].images.original.url);
+
+            var rate = $("<p>");
+            rate.prepend("Rated: "+playResults[j].rating);
             gdiv.prepend(g);
-            $("#gif-view").prepend(gdiv);
+            $("#gif-view").prepend(gdiv, rate);
         };
     });
 }
@@ -72,4 +75,19 @@ function displayGIF() {
 //add event listeners to dynamically generated elements
 $(document).on("click", ".playButton", displayGIF);
 
+$("#gif-view").on("click", ".gif", function () {
+    console.log("User clicked a gif");
+    var state = $(this).attr("gif-state")
+    var gif = $(this).attr("gif");
+    var img = $(this).attr("img");
+
+    if (state === "img") {
+        $(this).attr("src", gif);
+        $(this).attr("gif-state", "gif");
+    } else if (state === "gif") {
+        $(this).attr("src", img);
+        $(this).attr("gif-state", "img");
+    }
+
+});
 renderButtons();
