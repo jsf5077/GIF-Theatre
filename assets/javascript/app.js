@@ -30,6 +30,7 @@ function renderButtons() {
     }
 }
 function displayGIF() {
+    $("#gif-view").empty();
     var play = $(this).attr("data-name");
     console.log(play);
     var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=WaAIxnVpQ5UQ7Cn4V85lxhGj63yI9yEg&q="+play+"&limit=10&offset=0&lang=en"
@@ -42,13 +43,14 @@ function displayGIF() {
       
         console.log(playResults);
 
-        for (var i = 0; i < playResults.length, i++;) {
+        for (var j = 0; j < playResults.length; j++) {
             var gdiv = $("<div class='gif'>");
             var g = $("<img>");
-            g.attr("src", playResults[i].images.fixed_height_still.url);
+            g.attr("src", playResults[j].images.original_still.url);
+            g.attr("rating", playResults[j].rating);
+            console.log("rating "+playResults[j].rating);
             gdiv.prepend(g);
             $("#gif-view").prepend(gdiv);
-            console.log("wtf");
         };
     });
 }
