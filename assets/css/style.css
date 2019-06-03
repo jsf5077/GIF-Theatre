@@ -8,6 +8,7 @@ h3 {
 }
 p {
     font-size: 2rem;
+    color: white;
     font-family: 'Cinzel', serif;
     text-shadow:2px 2px  rgba(0, 0, 0, 0.6);
 }
@@ -41,7 +42,14 @@ img {
     background-size: cover;
     
 }
-.container {
+
+.card {
+    background-color: #6C757D;
+    border: 2px;
+    border-color: black;
+}
+body {
+    background-color: black;
     background-image: url("../images/body.jpg");
     max-width: 100%;
     min-height: 100%;
@@ -50,9 +58,4 @@ img {
     background-size: cover;
     background-attachment: fixed;
     height:100vh;
-}
-.card {
-    background-color: #6C757D;
-    border: 2px;
-    border-color: black;
 }
