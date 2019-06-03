@@ -1,16 +1,24 @@
 h1 {
     font-family: 'Luckiest Guy', cursive;  
+    text-shadow: 3px 3px  rgba(0, 0, 0, 0.6);
 }
 h3 {
     font-family: 'Cinzel', serif;
+    
 }
 p {
     font-size: 2rem;
     font-family: 'Cinzel', serif;
+    text-shadow:2px 2px  rgba(0, 0, 0, 0.6);
+}
+
+#intro {
+    text-shadow: 3px 3px  rgba(0, 0, 0, 0.6);
 }
 .playButton {
     font-size: 1.5rem;
     font-family: 'Cinzel', serif;
+    text-shadow: 3px 3px  rgba(0, 0, 0, 0.6);
 }
 label {
     font-size: 1.5rem;
@@ -23,4 +31,28 @@ input {
 img {
     min-width: 60%;
     max-width: 60%;
+}
+#jumbo {
+    background-image: url("../images/jumbotron.jpg");
+    min-width: 100%;
+    min-height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+    
+}
+.container {
+    background-image: url("../images/body.jpg");
+    max-width: 100%;
+    min-height: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height:100vh;
+}
+.card {
+    background-color: #6C757D;
+    border: 2px;
+    border-color: black;
 }

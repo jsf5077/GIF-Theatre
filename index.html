@@ -17,13 +17,20 @@
   </head>
 
   <body>
-    <div class="jumbotron jumbotron-fluid text-center">
-        <h1 class="display-1 lead" id="header">The GIF Theatre</h1>
+    <div class="jumbotron text-center m-0 py-12" id="jumbo">
+        <h1 class="display-1 lead text-white" id="header">The GIF Theatre</h1>
         <br>
-        <div class="col-11"><h3>Welcome to the GIF theater! Here you can click on the name of a play and the GIF theater will populate with gifs related to the play name! If you don't see a show you'd like to search for, you can add your own button using the button generator.</h3></div>
+        <br>
+        <br>
     </div>
     
-    <div class="container col-11">
+    <div class="container container-fluid col-11">
+        <div class="card">
+            <div class="col-12">
+                <h3 class="text-white" id="intro">Welcome to the GIF theater! Here you can click on the name of a play and the GIF theater will populate with gifs related to the play name! If you don't see a show you'd like to search for, you can add your own button using the button generator.
+                </h3>
+            </div>
+        </div>
         <div id="buttons-view"></div>
     
         <form id="play-form">
@@ -38,6 +45,7 @@
 
         <div class="text-center" id="gif-view"></div>
     </div>
+    
 
 
     <!-- JQuery -->
