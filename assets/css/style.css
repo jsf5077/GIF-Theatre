@@ -90,14 +90,7 @@ body {
 }
 
 @media screen and (max-width: 450x) {
-    #jumbo {
-        min-width: 100%;
-        min-height: 20%;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-        
-    }
+    
     
     
 }
