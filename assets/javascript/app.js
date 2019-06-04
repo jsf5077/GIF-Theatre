@@ -1,11 +1,3 @@
-////////////pseudocode//////////////
-
-//when buttons are clicked, API is called upon to generate gifs
-
-//when user clicks image, the gif animates
-
-//when user click again, animation stops
-
 //need an array for the inital buttons on the page.
 topics = ["Arsenic and Old Lace", "Proof", "Seminar", "These Shining Lives", "Epic Proportions", "Fawlty Towers", "She Kills Monsters", "One Flew Over The Cuckoos Nest", "12 Angry Jurors", "Lost In Yonkers", "True West" ];
 

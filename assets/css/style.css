@@ -8,6 +8,12 @@ h2 {
     font-family: 'Cinzel', serif;
     text-shadow:2px 2px  rgba(0, 0, 0, 0.6)
 }
+h3 {
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Cinzel', serif;
+    text-shadow:2px 2px  rgba(0, 0, 0, 0.6)
+}
 p {
     font-size: 2rem;
     color: white;
@@ -15,12 +21,14 @@ p {
     text-shadow:2px 2px  rgba(0, 0, 0, 0.6);
 }
 
-.submitButton {
+#label {
     font-size: 1.5rem;
-    color: white;   
+    color: white;
     font-family: 'Cinzel', serif;
-    background-color: rgba(0, 0, 0, 0.555);
+    text-shadow:2px 2px  rgba(0, 0, 0, 0.6);
 }
+
+
 
 .initialButtons {
     font-size: 1.5rem;
@@ -39,10 +47,19 @@ p {
     text-shadow: 3px 3px  rgba(0, 0, 0, 0.6);
     background-color: rgba(0, 0, 0, 0.555);
 }
-label {
+#label {
     font-size: 1.5rem;
     font-family: 'Cinzel', serif;
+    text-shadow: 3px 3px  rgba(0, 0, 0, 0.6);
 }
+
+#add-play {
+    color: white; 
+    font-size: 1.5rem;
+    font-family: 'Cinzel', serif;
+    text-shadow: 3px 3px  rgba(0, 0, 0, 0.6);
+}
+
 input {
     font-size: 1.5rem;
     font-family: 'Cinzel', serif;

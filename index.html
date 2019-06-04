@@ -31,20 +31,21 @@
             </div>
         </div>
         <div class="mb-3">
-            <div id="buttons-view"></div>
+            <div class="text-center" id="buttons-view"></div>
         </div>
 
-        <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <button class="submitButton btn-lg btn-outline-secondary" type="button" id="add-play" for="play-input">Search for GIF's of your favorite plays!</button>
-                </div>
-                <input type="text" class="form-control" id="play-input" placeholder="">
+        <form class="text-center" id="play-form">
+            <div class="row justify-content-center">
+                <label id="label" for="play-input">Search for GIF's of your favorite plays!</label>
             </div>
-            <div class="m-4 text-center">
-                    <h2>Click on a gif to animate!</h2>
-            </div>
+            <input class="m-0 btn-lg btn-outline-secondary" id="add-play" type="submit" value="Add a Play GIF Button">
+            <input type="text" id="play-input">
+        </form>
+        <div class="my-2 text-center">
+                <h3>Click on a gif to animate!</h3>
+        </div>
+
         <div class="text-center" id="gif-view"></div>
-    </div>
     
 
 
