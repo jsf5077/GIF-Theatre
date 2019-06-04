@@ -20,8 +20,7 @@
 
   <body>
     <div class="jumbotron text-center m-0 py-12" id="jumbo">
-        <h1 class="display-1 lead text-white" id="header">The GIF Theatre</h1>
-        <br>
+        <p class="lead text-white" id="header">The GIF Theatre</p>
     </div>
     
     <div class="container container-fluid col-11">
@@ -36,19 +35,25 @@
             <div class="text-center" id="buttons-view"></div>
         </div>
 
-        <form class="text-center" id="play-form">
+        <form class=" text-center" id="play-form">
             <div class="row justify-content-center">
                 <label id="label" for="play-input">Search for GIF's of your favorite plays!</label>
             </div>
-            <input class="m-0 btn-lg btn-outline-secondary" id="add-play" type="submit" value="Add a Play GIF Button">
-            <input type="text" id="play-input">
+            <div class="row justify-content-center">
+                <input class="m-0 btn-lg btn-outline-secondary" id="add-play" type="submit" value="Add a Play GIF Button">
+            </div>
+
+            <div class="row justify-content-center">
+                <input type="text" id="play-input">
+            </div>
         </form>
         <div class="my-2 text-center">
                 <h3>Click on a gif to animate!</h3>
         </div>
 
         <div class="text-center" id="gif-view"></div>
-    
+    </div>
+
 
 
     <!-- JQuery -->

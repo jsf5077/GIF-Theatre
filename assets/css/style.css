@@ -1,9 +1,9 @@
-h1 {
-    font-family: 'Luckiest Guy', cursive;  
+#header {
+    font-family: 'Luckiest Guy', cursive; font-size: 4rem;
     text-shadow: 3px 3px  rgba(0, 0, 0, 0.6);
 }
 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
     font-family: 'Cinzel', serif;
     text-shadow:2px 2px  rgba(0, 0, 0, 0.6)
@@ -65,8 +65,8 @@ input {
     font-family: 'Cinzel', serif;
 }
 img {
-    min-width: 60%;
-    max-width: 60%;
+    min-width: 90%;
+    max-width: 90%;
 }
 #jumbo {
     background-image: url("../images/jumbotron.jpg");
@@ -88,26 +88,35 @@ body {
     background-attachment: fixed;
     height:100vh;
 }
-
-@media screen and (max-width: 450x) {
-    
-    
-    
+@media only screen and (max-width: 30em) {
+    body .btn { white-space: normal }
+  }
+@media (min-width: 576px) {
+    #header {
+        font-size: 6rem;
+        
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    img {
+        min-width: 60%;
+        max-width: 60%;
+    }
 }
-@media screen and (max-width: 576px) {
-    
-} 
 
-@media screen and (max-width: 768px) {
-    
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2rem;
+    }
+}
+  
+@media (min-width: 992px) {
+
 }
 
-@media screen and (max-width: 992px) {
-   
-} 
+@media (min-width: 1200px) {
 
-@media screen and (max-width: 1200px) {
- }
-
+}
  
 
