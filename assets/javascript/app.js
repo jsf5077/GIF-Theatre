@@ -18,7 +18,7 @@ function renderButtons() {
     for (var i = 0; i < topics.length; i++) {
 
         //generate buttons for each play in the array using jquery.
-        var a = $("<button class='btn btn-secondary btn-lg m-1'>");
+        var a = $("<button class='initialButtons btn btn-outline-secondary btn-lg m-1'>");
         // Add a class
         a.addClass("playButton");
         // Add a data-attribute with a value of the play at index i

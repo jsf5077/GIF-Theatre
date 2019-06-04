@@ -20,29 +20,29 @@
     <div class="jumbotron text-center m-0 py-12" id="jumbo">
         <h1 class="display-1 lead text-white" id="header">The GIF Theatre</h1>
         <br>
-        <br>
-        <br>
     </div>
     
     <div class="container container-fluid col-11">
-        <div class="card">
-            <div class="col-12">
-                <h3 class="text-white" id="intro">Welcome to the GIF theater! Here you can click on the name of a play and the GIF theater will populate with gifs related to the play name! If you don't see a show you'd like to search for, you can add your own button using the button generator.
-                </h3>
+        
+        <div class="btn-outline-dark">
+            <div class="col">
+                <h2 class="text-white py-2 text-center" id="intro">Welcome to the GIF theater! Here you can click on the name of a play and the GIF theater will populate with gifs related to the play name! If you don't see a show you'd like to search for, you can add your own button using the button generator.
+                </h2>
             </div>
         </div>
-        <div id="buttons-view"></div>
-    
-        <form id="play-form">
-            <label for="play-input">Search for GIF's of your favorite plays!</label>
-            <input type="text" id="play-input"><br>
-            <input class="m-1" id="add-play" type="submit" value="Add a Play GIF Button">
-        </form>
-    
-        <div class="m-1">
-                <h3>Click on a gif to animate!</h3>
+        <div class="mb-3">
+            <div id="buttons-view"></div>
         </div>
 
+        <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <button class="submitButton btn-lg btn-outline-secondary" type="button" id="add-play" for="play-input">Search for GIF's of your favorite plays!</button>
+                </div>
+                <input type="text" class="form-control" id="play-input" placeholder="">
+            </div>
+            <div class="m-4 text-center">
+                    <h2>Click on a gif to animate!</h2>
+            </div>
         <div class="text-center" id="gif-view"></div>
     </div>
     
