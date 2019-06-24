@@ -1,3 +1,5 @@
+# GIF Theatre
+
 https://jsf5077.github.io/Giphy-API/
 
 welcome to The Gif Theatre!
